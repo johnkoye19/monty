@@ -1,5 +1,5 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#ifndef _MONTY_H
+#define _MONTY_H
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
