@@ -16,9 +16,6 @@ void pall(stack_t *h)
 stack_t *push(int n)
 {
 	/*add the number to the end*/
-	stack_t *h;
-
-	h = 0;
 	addnode_start(h, n);
 
 	return (h);
