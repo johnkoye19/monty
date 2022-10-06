@@ -18,22 +18,47 @@ stack_t *push(int n)
 	/*add the number to the end*/
 	stack_t *h;
 
+	h = 0;
 	addnode_start(h, n);
 
 	return (h);
 }
 
-stack_t *addnode_start(stack *h, int n)
-{
-	stack_t *tmp = h, new;
+#include "lists.h"
+/**
+ * add_dnodeint - function that adds a new node
+ * at the beginning of a dlistint_t list.
+ * @head: pointer to pointer of head node
+ * @n: the data of the new node
+ * Return: returns address of the new element
+ */
 
+stack_t *addnode_start(stack_t *h, const int n)
+{
+	stack_t *new;
+
+	/* check if h is null */
 	if (h == 0)
-		return (0);
+	{
+		new = malloc(sizeof(stack_t));
+		if (new == 0)
+			return (0);
+		new->n = n;
+		new->prev = 0;
+		new->next = 0;
+		h = new;
+		return (new);
+	}
 	new = malloc(sizeof(stack_t));
 	if (new == 0)
 		return (0);
 	new->n = n;
 	new->prev = 0;
-	new->next = 
+	new->next = *h;
+	h->prev = new;
+	*head = new;
 
+	return (h);
+	/* then craete node */
+	/* return new node */
 }
