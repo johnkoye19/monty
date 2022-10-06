@@ -9,6 +9,8 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
+#include <stdlib.h>
+#include <stdio.h>
 typedef struct stack_s
 {
         int n;
